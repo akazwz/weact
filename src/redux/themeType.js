@@ -5,7 +5,7 @@ if (!type) {
     type = 'light'
 }
 
-export const typeSlice = createSlice({
+export const themeType = createSlice({
     name: 'type',
     initialState: {
         value: type
@@ -20,8 +20,8 @@ export const typeSlice = createSlice({
     }
 })
 
-export const {setLight, setDark} = typeSlice.actions
+export const {setLight, setDark} = themeType.actions
 
 export const typeValue = state => state.type.value
 
-export default typeSlice.reducer
+export default themeType.reducer

@@ -3,18 +3,18 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-// homepage
-function HomePage() {
+// not found
+function NotFound() {
     return (
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
                 <Typography>
-                    <h1>this is home page</h1>
+                    <h1>404 NOT FOUND</h1>
                 </Typography>
             </Container>
         </Fragment>
     );
 }
 
-export default HomePage
+export default NotFound

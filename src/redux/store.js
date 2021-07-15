@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import typeReducer from '../redux/typeSlice'
+import typeReducer from './themeType'
 
 export default configureStore({
     reducer: {

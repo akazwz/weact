@@ -1,10 +1,10 @@
-import React, {Fragment} from "react";
+import React, {Fragment} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import LanguageSetting from '../components/LanguageSetting';
+import DarkModeSetting from '../components/DarkModeSetting';
 
-import LanguageSetting from "../components/LanguageSetting";
-import DarkModeSetting from "../components/DarkModeSetting";
-
+// setting page
 function SettingPage() {
     return (
         <Fragment>
@@ -15,7 +15,7 @@ function SettingPage() {
                 <DarkModeSetting/>
             </Container>
         </Fragment>
-    )
+    );
 }
 
 export default SettingPage

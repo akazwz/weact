@@ -6,7 +6,7 @@ import NativeSelect from '@material-ui/core/NativeSelect'
 import Divider from '@material-ui/core/Divider';
 import {useTranslation} from 'react-i18next';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {},
     h: {
         display: "inline"
@@ -14,13 +14,14 @@ const useStyles = makeStyles((theme) => ({
     select: {
         float: "right",
         fontSize: "large"
-    }
-}))
+    },
+}));
 
+// change language
 function LanguageSetting() {
     const classes = useStyles();
     const {t, i18n} = useTranslation();
-    let lang = i18n.language
+    let lang = i18n.language;
     const handleSelect = (e) => {
         let lang = e.target.value
         i18n.changeLanguage(lang).then()
@@ -41,7 +42,7 @@ function LanguageSetting() {
             </NativeSelect>
             <Divider/>
         </div>
-    )
+    );
 }
 
-export default LanguageSetting
+export default LanguageSetting;

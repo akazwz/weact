@@ -1,54 +1,59 @@
-import React, {useState, useEffect} from "react";
-import {AppBar, BottomNavigation, BottomNavigationAction, makeStyles, Toolbar} from "@material-ui/core";
-import {useLocation, Link} from "react-router-dom";
-import HomeIcon from "@material-ui/icons/Home";
+import React, {useState, useEffect} from 'react';
+import {AppBar, BottomNavigation, BottomNavigationAction, makeStyles, Toolbar} from '@material-ui/core';
+import {useLocation, Link} from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
 import SettingsIcon from '@material-ui/icons/Settings';
 
-const useStyles = makeStyles((theme) => ({
+// style fix it bottom
+const useStyles = makeStyles(() => ({
     appBar: {
-        top: "auto",
+        top: 'auto',
         bottom: 0,
         margin: 0,
         padding: 0,
-        backgroundColor: "transparent"
+        backgroundColor: 'transparent'
     },
     toolBar: {
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
         padding: 0,
         margin: 0,
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
     },
     bng: {
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
         margin: 0,
         padding: 0,
     },
     toolBarNone: {},
-    bna: {}
+    bna: {},
 }))
 
+// bottom navigation bar, use to change route
 function BottomNavBar() {
     const classes = useStyles();
+    // useState to control bottom navigation action`s state
     const [value, setValue] = useState(0);
+    // get route pathname
     let location = useLocation();
 
+    // useEffect when location changed,change bna`s state
     useEffect(() => {
         switch (location.pathname) {
             case '/':
-                setValue(0)
-                break
+                setValue(0);
+                break;
             case '/test':
-                setValue(1)
-                break
+                setValue(1);
+                break;
             case '/setting':
-                setValue(3)
-                break
+                setValue(3);
+                break;
             default:
-                setValue(0)
+                setValue(0);
         }
-    }, [location])
+    }, [location]);
 
     return (
         <React.Fragment>
@@ -69,7 +74,7 @@ function BottomNavBar() {
             </AppBar>
             <Toolbar className={classes.toolBarNone}/>
         </React.Fragment>
-    )
+    );
 }
 
 export default BottomNavBar

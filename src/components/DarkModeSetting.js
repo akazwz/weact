@@ -5,49 +5,50 @@ import BrightnessMediumIcon from '@material-ui/icons/BrightnessMedium';
 import {useTranslation} from 'react-i18next';
 import Divider from '@material-ui/core/Divider';
 import Switch from '@material-ui/core/Switch';
-import {setLight, setDark, typeValue} from "../redux/typeSlice";
+import {setLight, setDark, typeValue} from "../redux/themeType";
 import {useDispatch, useSelector} from "react-redux";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {},
     h: {
-        display: "inline"
+        display: 'inline'
     },
     switch: {
-        float: "right",
-        fontSize: "large"
-    }
-}))
+        float: 'right',
+        fontSize: 'large'
+    },
+}));
 
+// switch dark mode or light mode
 function DarkModeSetting() {
-    const type = useSelector(typeValue)
-    let switchState
+    const type = useSelector(typeValue);
+    let switchState;
     switch (type) {
         case 'light':
-            switchState = false
-            break
+            switchState = false;
+            break;
         case 'dark':
-            switchState = true
-            break
+            switchState = true;
+            break;
         default:
-            switchState = false
+            switchState = false;
     }
-    const [checked, setChecked] = useState(switchState)
+    const [checked, setChecked] = useState(switchState);
     const dispatch = useDispatch();
     const classes = useStyles();
     const {t} = useTranslation();
 
     const handleSwitchChanged = () => {
         if (checked) {
-            setChecked(false)
-            dispatch(setLight())
-            localStorage.setItem('type', 'light')
+            setChecked(false);
+            dispatch(setLight());
+            localStorage.setItem('type', 'light');
         } else {
-            setChecked(true)
-            dispatch(setDark())
-            localStorage.setItem('type', 'dark')
+            setChecked(true);
+            dispatch(setDark());
+            localStorage.setItem('type', 'dark');
         }
-    }
+    };
     return (
         <div className={classes.root}>
             <CssBaseline/>
@@ -62,7 +63,7 @@ function DarkModeSetting() {
             </h1>
             <Divider/>
         </div>
-    )
+    );
 }
 
 export default DarkModeSetting
