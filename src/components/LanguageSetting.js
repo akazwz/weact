@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import LanguageIcon from '@material-ui/icons/Language';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import NativeSelect from '@material-ui/core/NativeSelect'
+import Divider from '@material-ui/core/Divider';
 import {useTranslation} from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,7 @@ function LanguageSetting() {
                 <option value="zh">中文</option>
                 <option value="en">English</option>
             </NativeSelect>
+            <Divider/>
         </div>
     )
 }

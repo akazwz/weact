@@ -7,12 +7,11 @@ import HomePage from "./pages/HomePage";
 import NotFound from "./components/NotFound";
 import TestPage from "./pages/TestPage";
 import SettingPage from "./pages/SettingPage";
+import {useSelector} from "react-redux";
+import {typeValue} from "./redux/typeSlice";
 
 function App() {
-    let type = localStorage.getItem('type');
-    if (!type) {
-        type = 'light'
-    }
+    const type = useSelector(typeValue)
     const theme = createTheme({
         palette: {
             type: type
