@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/weactool/static/css/main.afd7172b.chunk.css",
-    "main.js": "/weactool/static/js/main.eb54953c.chunk.js",
-    "main.js.map": "/weactool/static/js/main.eb54953c.chunk.js.map",
-    "runtime-main.js": "/weactool/static/js/runtime-main.c857c124.js",
-    "runtime-main.js.map": "/weactool/static/js/runtime-main.c857c124.js.map",
-    "static/js/2.ec54d281.chunk.js": "/weactool/static/js/2.ec54d281.chunk.js",
-    "static/js/2.ec54d281.chunk.js.map": "/weactool/static/js/2.ec54d281.chunk.js.map",
-    "index.html": "/weactool/index.html",
-    "static/css/main.afd7172b.chunk.css.map": "/weactool/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.ec54d281.chunk.js.LICENSE.txt": "/weactool/static/js/2.ec54d281.chunk.js.LICENSE.txt",
-    "static/media/getFetch.cjs": "/weactool/static/media/getFetch.582d29c4.cjs"
+    "main.css": "/weact/static/css/main.afd7172b.chunk.css",
+    "main.js": "/weact/static/js/main.eb54953c.chunk.js",
+    "main.js.map": "/weact/static/js/main.eb54953c.chunk.js.map",
+    "runtime-main.js": "/weact/static/js/runtime-main.83373c24.js",
+    "runtime-main.js.map": "/weact/static/js/runtime-main.83373c24.js.map",
+    "static/js/2.ec54d281.chunk.js": "/weact/static/js/2.ec54d281.chunk.js",
+    "static/js/2.ec54d281.chunk.js.map": "/weact/static/js/2.ec54d281.chunk.js.map",
+    "index.html": "/weact/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/weact/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.ec54d281.chunk.js.LICENSE.txt": "/weact/static/js/2.ec54d281.chunk.js.LICENSE.txt",
+    "static/media/getFetch.cjs": "/weact/static/media/getFetch.582d29c4.cjs"
   },
   "entrypoints": [
-    "static/js/runtime-main.c857c124.js",
+    "static/js/runtime-main.83373c24.js",
     "static/js/2.ec54d281.chunk.js",
     "static/css/main.afd7172b.chunk.css",
     "static/js/main.eb54953c.chunk.js"
