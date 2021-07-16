@@ -1,0 +1,18 @@
+{
+  "bottom": {
+    "home": "主页",
+    "qrcode": "二维码",
+    "test": "测试",
+    "setting": "设置"
+  },
+  "home": {
+    "title": "这是主页"
+  },
+  "test": {
+    "title": "这是测试页面"
+  },
+  "setting": {
+    "language": "语言选择",
+    "dark-mode": "黑暗模式"
+  }
+}

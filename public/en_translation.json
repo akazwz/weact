@@ -1,0 +1,18 @@
+{
+  "bottom": {
+    "home": "Home",
+    "qrcode": "QRCode",
+    "test": "test",
+    "setting": "setting"
+  },
+  "home": {
+    "title": "this is homepage"
+  },
+  "test": {
+    "title": "this is test page"
+  },
+  "setting": {
+    "languages": "Languages",
+    "dark-mode": "DarkMode"
+  }
+}
