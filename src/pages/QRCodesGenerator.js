@@ -2,13 +2,26 @@ import React, {Fragment, useState, useEffect} from 'react';
 import QRCode from 'qrcode.react';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import {makeStyles} from '@material-ui/core';
 
+const useStyles = makeStyles((theme) => ({
+    card: {},
+    cardContent: {
+        textAlign: 'center'
+    },
+    qrcode: {
+    }
+}))
 
 function QRCodesGenerator() {
-    const [content, setContent] = useState();
-    const [qrValue, setQrValue] = useState();
+    const classes = useStyles();
+    const [qrValue, setQrValue] = useState('');
+    const [content, setContent] = useState('');
     const handleContentChange = (e) => {
         setContent(e.target.value);
     };
@@ -19,17 +32,25 @@ function QRCodesGenerator() {
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
-                <Typography>
-                    <h1>this is qr generator</h1>
-                    <QRCode value={qrValue} size={175}/>
-                    <TextField
-                        id="content"
-                        label="Outlined"
-                        variant="outlined"
-                        value={content}
-                        onChange={handleContentChange}
-                    />
-                </Typography>
+                <Card>
+                    <CardContent className={classes.cardContent}>
+                        <QRCode
+                            className={classes.qrcode}
+                            value={qrValue}
+                            size={150}
+                        />
+                    </CardContent>
+                </Card>
+                <Tabs>
+                    <Tab />
+                </Tabs>
+                <TextField
+                    id="content"
+                    label="Content"
+                    variant="outlined"
+                    value={content}
+                    onChange={handleContentChange}
+                />
             </Container>
         </Fragment>
     );
