@@ -9,7 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles} from "@material-ui/core";
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     card: {},
     cardContent: {
         textAlign: 'center',

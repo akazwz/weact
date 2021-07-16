@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import LanguageIcon from '@material-ui/icons/Language';
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -9,11 +9,11 @@ import {useTranslation} from 'react-i18next';
 const useStyles = makeStyles(() => ({
     root: {},
     h: {
-        display: "inline"
+        display: "inline",
     },
     select: {
         float: "right",
-        fontSize: "large"
+        fontSize: "large",
     },
 }));
 

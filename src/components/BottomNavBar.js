@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
         bottom: 0,
         margin: 0,
         padding: 0,
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
     },
     toolBar: {
         width: '100%',
@@ -85,4 +85,4 @@ function BottomNavBar() {
     );
 }
 
-export default BottomNavBar
+export default BottomNavBar;

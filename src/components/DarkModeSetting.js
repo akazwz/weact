@@ -5,8 +5,8 @@ import BrightnessMediumIcon from '@material-ui/icons/BrightnessMedium';
 import {useTranslation} from 'react-i18next';
 import Divider from '@material-ui/core/Divider';
 import Switch from '@material-ui/core/Switch';
-import {setLight, setDark, typeValue} from "../redux/themeType";
-import {useDispatch, useSelector} from "react-redux";
+import {setLight, setDark, typeValue} from '../redux/themeType';
+import {useDispatch, useSelector} from 'react-redux';
 
 const useStyles = makeStyles(() => ({
     root: {},
@@ -66,4 +66,4 @@ function DarkModeSetting() {
     );
 }
 
-export default DarkModeSetting
+export default DarkModeSetting;

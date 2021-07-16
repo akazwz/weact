@@ -1,6 +1,6 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
-let type = localStorage.getItem('type')
+let type = localStorage.getItem('type');
 if (!type) {
     type = 'light'
 }
@@ -18,10 +18,10 @@ export const themeType = createSlice({
             state.value = 'dark'
         },
     }
-})
+});
 
-export const {setLight, setDark} = themeType.actions
+export const {setLight, setDark} = themeType.actions;
 
-export const typeValue = state => state.type.value
+export const typeValue = state => state.type.value;
 
-export default themeType.reducer
+export default themeType.reducer;

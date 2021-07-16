@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react';
+import React, {Fragment, useState} from 'react';
 import QRCode from 'qrcode.react';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -7,9 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Divider from '@material-ui/core/Divider';
 
 import {makeStyles} from '@material-ui/core';
-import QRCodeInput from "../components/QRCodeInput";
+import QRCodeInput from '../components/QRCodeInput';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     card: {},
     cardContent: {
         textAlign: 'center',
