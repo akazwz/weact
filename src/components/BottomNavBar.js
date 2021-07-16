@@ -3,6 +3,7 @@ import {AppBar, BottomNavigation, BottomNavigationAction, makeStyles, Toolbar} f
 import {useLocation, Link} from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import SettingsIcon from '@material-ui/icons/Settings';
+import CenterFocusStrongIcon from '@material-ui/icons/CenterFocusStrong';
 
 // style fix it bottom
 const useStyles = makeStyles(() => ({
@@ -44,8 +45,11 @@ function BottomNavBar() {
             case '/':
                 setValue(0);
                 break;
-            case '/test':
+            case '/qrcode':
                 setValue(1);
+                break;
+            case '/test':
+                setValue(2);
                 break;
             case '/setting':
                 setValue(3);
@@ -65,10 +69,14 @@ function BottomNavBar() {
                     <BottomNavigation
                         value={value}
                         className={classes.bng}>
-                        <BottomNavigationAction label="Home" icon={<HomeIcon/>} component={Link} to="/"/>
-                        <BottomNavigationAction label="Home" icon={<HomeIcon/>} component={Link} to="/test"/>
-                        <BottomNavigationAction label="Home" icon={<HomeIcon/>} component={Link} to="/"/>
-                        <BottomNavigationAction label="Setting" icon={<SettingsIcon/>} component={Link} to="/setting"/>
+                        <BottomNavigationAction label="Home" icon={<HomeIcon/>} component={Link}
+                                                to="/"/>
+                        <BottomNavigationAction label="QR" icon={<CenterFocusStrongIcon/>} component={Link}
+                                                to="/qrcode"/>
+                        <BottomNavigationAction label="Test" icon={<HomeIcon/>} component={Link}
+                                                to="/test"/>
+                        <BottomNavigationAction label="Setting" icon={<SettingsIcon/>} component={Link}
+                                                to="/setting"/>
                     </BottomNavigation>
                 </Toolbar>
             </AppBar>

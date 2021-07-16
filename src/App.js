@@ -9,6 +9,7 @@ import TestPage from './pages/TestPage';
 import SettingPage from './pages/SettingPage';
 import {useSelector} from 'react-redux';
 import {typeValue} from './redux/themeType';
+import QRCodesGenerator from "./pages/QRCodesGenerator";
 
 function App() {
     const type = useSelector(typeValue)
@@ -22,7 +23,8 @@ function App() {
             <ThemeProvider theme={theme}>
                 <Switch>
                     <Route exact path="/" component={HomePage}/>
-                    <Route exact path="test" component={TestPage}/>
+                    <Route exact path="/test" component={TestPage}/>
+                    <Route exact path="/qrcode" component={QRCodesGenerator}/>
                     <Route exact path="/setting" component={SettingPage}/>
                     <Route exact component={NotFound}/>
                 </Switch>
