@@ -9,9 +9,7 @@ function NotFound() {
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
-                <Typography>
                     <h1>404 NOT FOUND</h1>
-                </Typography>
             </Container>
         </Fragment>
     );

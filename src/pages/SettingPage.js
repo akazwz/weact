@@ -11,7 +11,6 @@ function SettingPage() {
             <CssBaseline/>
             <Container maxWidth="sm">
                 <LanguageSetting/>
-
                 <DarkModeSetting/>
             </Container>
         </Fragment>

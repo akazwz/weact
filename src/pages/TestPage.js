@@ -9,9 +9,7 @@ function TestPage() {
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
-                <Typography>
                     <h1>this is test page</h1>
-                </Typography>
             </Container>
         </Fragment>
     );
