@@ -1,17 +1,33 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
+import QRCode from 'qrcode.react';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import QRCode from 'qrcode.react';
+import TextField from '@material-ui/core/TextField';
+
 
 function QRCodesGenerator() {
+    const [content, setContent] = useState();
+    const handleContentChange = (e) => {
+        setContent(e.target.value);
+    };
+    useEffect(function () {
+
+    }, [content])
     return (
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
                 <Typography>
                     <h1>this is qr generator</h1>
-                    <QRCode value={"this is qr code"} size={175}/>
+                    <QRCode value={content} size={175}/>
+                    <TextField
+                        id="content"
+                        label="Outlined"
+                        variant="outlined"
+                        value={content}
+                        onChange={handleContentChange}
+                    />
                 </Typography>
             </Container>
         </Fragment>
