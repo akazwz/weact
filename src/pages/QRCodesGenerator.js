@@ -8,11 +8,12 @@ import TextField from '@material-ui/core/TextField';
 
 function QRCodesGenerator() {
     const [content, setContent] = useState();
+    const [qrValue, setQrValue] = useState();
     const handleContentChange = (e) => {
         setContent(e.target.value);
     };
     useEffect(function () {
-
+        setQrValue(content)
     }, [content])
     return (
         <Fragment>
@@ -20,7 +21,7 @@ function QRCodesGenerator() {
                 <CssBaseline/>
                 <Typography>
                     <h1>this is qr generator</h1>
-                    <QRCode value={content} size={175}/>
+                    <QRCode value={qrValue} size={175}/>
                     <TextField
                         id="content"
                         label="Outlined"
