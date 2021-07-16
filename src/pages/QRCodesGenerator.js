@@ -45,6 +45,7 @@ function QRCodesGenerator() {
                             className={classes.qrcode}
                             value={qrValue}
                             size={150}
+                            renderAs="svg"
                         />
                     </CardContent>
                 </Card>

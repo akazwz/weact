@@ -9,7 +9,7 @@ i18n
     .use(LanguageDetector)
     .init({
         fallbackLng: 'zh',
-        debug: true,
+        debug: false,
         interpolation: {
             escapeValue: false,
         },
