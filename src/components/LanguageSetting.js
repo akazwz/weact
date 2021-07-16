@@ -30,7 +30,7 @@ function LanguageSetting() {
         <div className={classes.root}>
             <CssBaseline/>
             <h1 className={classes.h}>
-                <LanguageIcon/> {t("languages")}
+                <LanguageIcon/> {t('setting.languages')}
             </h1>
             <NativeSelect
                 className={classes.select}

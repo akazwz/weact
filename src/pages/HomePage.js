@@ -1,14 +1,16 @@
 import React, {Fragment} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import {useTranslation} from 'react-i18next';
 
 // homepage
 function HomePage() {
+    const {t} = useTranslation();
     return (
         <Fragment>
             <Container maxWidth={"sm"}>
                 <CssBaseline/>
-                    <h1>this is home page</h1>
+                    <h1>{t('home.title')}</h1>
             </Container>
         </Fragment>
     );

@@ -53,7 +53,7 @@ function DarkModeSetting() {
         <div className={classes.root}>
             <CssBaseline/>
             <h1 className={classes.h}>
-                <BrightnessMediumIcon/> {t("dark-mode")}
+                <BrightnessMediumIcon/> {t('setting.dark-mode')}
                 <Switch
                     className={classes.switch}
                     checked={checked}

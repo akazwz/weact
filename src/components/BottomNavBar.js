@@ -4,7 +4,8 @@ import {useLocation, Link} from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import SettingsIcon from '@material-ui/icons/Settings';
 import CenterFocusStrongIcon from '@material-ui/icons/CenterFocusStrong';
-
+import BugReportIcon from '@material-ui/icons/BugReport';
+import {useTranslation} from 'react-i18next';
 // style fix it bottom
 const useStyles = makeStyles(() => ({
     appBar: {
@@ -34,6 +35,7 @@ const useStyles = makeStyles(() => ({
 // bottom navigation bar, use to change route
 function BottomNavBar() {
     const classes = useStyles();
+    const {t} = useTranslation();
     // useState to control bottom navigation action`s state
     const [value, setValue] = useState(0);
     // get route pathname
@@ -69,13 +71,13 @@ function BottomNavBar() {
                     <BottomNavigation
                         value={value}
                         className={classes.bng}>
-                        <BottomNavigationAction label="Home" icon={<HomeIcon/>} component={Link}
+                        <BottomNavigationAction label={t('bottom.home')} icon={<HomeIcon/>} component={Link}
                                                 to="/"/>
-                        <BottomNavigationAction label="QR" icon={<CenterFocusStrongIcon/>} component={Link}
+                        <BottomNavigationAction label={t('bottom.qrcode')} icon={<CenterFocusStrongIcon/>} component={Link}
                                                 to="/qrcode"/>
-                        <BottomNavigationAction label="Test" icon={<HomeIcon/>} component={Link}
+                        <BottomNavigationAction label={t('bottom.test')} icon={<BugReportIcon/>} component={Link}
                                                 to="/test"/>
-                        <BottomNavigationAction label="Setting" icon={<SettingsIcon/>} component={Link}
+                        <BottomNavigationAction label={t('bottom.setting')} icon={<SettingsIcon/>} component={Link}
                                                 to="/setting"/>
                     </BottomNavigation>
                 </Toolbar>
