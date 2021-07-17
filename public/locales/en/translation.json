@@ -8,6 +8,12 @@
   "home": {
     "title": "this is homepage"
   },
+  "qrcode": {
+    "text": "Text",
+    "wifi": "WIFI",
+    "file": "FILE",
+    "pic": "pic"
+  },
   "test": {
     "title": "this is test page"
   },

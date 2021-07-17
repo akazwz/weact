@@ -8,6 +8,12 @@
   "home": {
     "title": "这是主页"
   },
+  "qrcode": {
+    "text": "文本",
+    "wifi": "WIFI",
+    "file": "文件",
+    "pic": "图片"
+  },
   "test": {
     "title": "这是测试页面"
   },

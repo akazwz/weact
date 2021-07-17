@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import {makeStyles} from "@material-ui/core";
 import FileUpload from "./FileUpload";
+import {useTranslation} from 'react-i18next';
 
 
 const useStyles = makeStyles(() => ({
@@ -32,6 +33,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 function QRCodeInput(props) {
+    const {t} = useTranslation();
     const classes = useStyles();
     const [content, setContent] = useState('');
     const [radioValue, setRadioValue] = useState('text');
@@ -57,22 +59,22 @@ function QRCodeInput(props) {
                         <FormControlLabel
                             value="text"
                             control={<Radio color="primary"/>}
-                            label="Text"
+                            label={t('qrcode.text')}
                         />
                         <FormControlLabel
                             value="wifi"
                             control={<Radio color="primary"/>}
-                            label="WIFI"
+                            label={t('qrcode.wifi')}
                         />
                         <FormControlLabel
                             value="file"
                             control={<Radio color="primary"/>}
-                            label="FILE"
+                            label={t('qrcode.file')}
                         />
                         <FormControlLabel
                             value="pic"
                             control={<Radio color="primary"/>}
-                            label="PIC"
+                            label={t('qrcode.pic')}
                         />
                     </RadioGroup>
                 </FormControl>
