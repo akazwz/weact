@@ -7,6 +7,7 @@ import Radio from '@material-ui/core/Radio';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import {makeStyles} from "@material-ui/core";
+import FileUpload from "./FileUpload";
 
 
 const useStyles = makeStyles(() => ({
@@ -91,7 +92,7 @@ function QRCodeInput(props) {
                         onChange={handleTextContentChange}
                     />) : null}
                     {radioValue === 'wifi' ? (<h1>wifi</h1>) : null}
-                    {radioValue === 'file' ? (<h1>file</h1>) : null}
+                    {radioValue === 'file' ? (<FileUpload/>) : null}
                     {radioValue === 'pic' ? (<h1>pic</h1>) : null}
                 </FormControl>
             </Card>
