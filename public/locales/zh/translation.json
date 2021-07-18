@@ -18,7 +18,7 @@
     "title": "这是测试页面"
   },
   "setting": {
-    "language": "语言选择",
+    "languages": "语言选择",
     "dark-mode": "黑暗模式"
   }
 }

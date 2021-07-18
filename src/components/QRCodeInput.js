@@ -9,6 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles} from "@material-ui/core";
 import FileUpload from "./FileUpload";
 import {useTranslation} from 'react-i18next';
+import WIFIInput from "./WIFIInput";
 
 
 const useStyles = makeStyles(() => ({
@@ -26,8 +27,7 @@ const useStyles = makeStyles(() => ({
         textAlign: 'center',
     },
     input: {
-        marginTop: '10px',
-        marginBottom: '10px',
+        margin: '10px',
         width: '100%',
     },
 }));
@@ -93,7 +93,7 @@ function QRCodeInput(props) {
                         size="medium"
                         onChange={handleTextContentChange}
                     />) : null}
-                    {radioValue === 'wifi' ? (<h1>wifi</h1>) : null}
+                    {radioValue === 'wifi' ? (<WIFIInput/>) : null}
                     {radioValue === 'file' ? (<FileUpload/>) : null}
                     {radioValue === 'pic' ? (<h1>pic</h1>) : null}
                 </FormControl>
