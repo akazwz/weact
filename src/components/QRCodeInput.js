@@ -92,7 +92,7 @@ function QRCodeInput(props) {
                         onChange={handleTextContentChange}
                     />) : null}
                     {radioValue === 'wifi' ? (<WIFIInput handleWIFIQrValue={props.handleQrValue}/>) : null}
-                    {radioValue === 'file' ? (<FileUpload/>) : null}
+                    {radioValue === 'file' ? (<FileUpload handleFileQrValue={props.handleQrValue}/>) : null}
                     {radioValue === 'pic' ? (<h1>pic</h1>) : null}
                 </FormControl>
             </Card>
