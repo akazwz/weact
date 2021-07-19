@@ -9,8 +9,16 @@
     "title": "this is homepage"
   },
   "qrcode": {
-    "text": "Text",
-    "wifi": "WIFI",
+    "text": {
+      "title": "Text",
+      "content": "Content, multiline"
+    },
+    "wifi": {
+      "title": "WIFI",
+      "network": "NetworkName",
+      "password": "Password",
+      "encryption": "Encryption"
+    },
     "file": "FILE",
     "pic": "pic"
   },

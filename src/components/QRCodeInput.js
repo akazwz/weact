@@ -35,16 +35,15 @@ const useStyles = makeStyles(() => ({
 function QRCodeInput(props) {
     const {t} = useTranslation();
     const classes = useStyles();
-    const [content, setContent] = useState('');
+    const [qrValue, setQrValue] = useState('');
     const [radioValue, setRadioValue] = useState('text');
-    const handleTextContentChange = (e) => {
-        setContent(e.target.value);
-        props.handleQrValue(e.target.value)
-    };
     const handleRadioChange = (e) => {
         setRadioValue(e.target.value)
-    }
-
+    };
+    const handleTextContentChange = (e) => {
+        setQrValue(e.target.value);
+        props.handleQrValue(qrValue);
+    };
     return (
         <div>
             <Card className={classes.radiosCard}>
@@ -59,12 +58,12 @@ function QRCodeInput(props) {
                         <FormControlLabel
                             value="text"
                             control={<Radio color="primary"/>}
-                            label={t('qrcode.text')}
+                            label={t('qrcode.text.title')}
                         />
                         <FormControlLabel
                             value="wifi"
                             control={<Radio color="primary"/>}
-                            label={t('qrcode.wifi')}
+                            label={t('qrcode.wifi.title')}
                         />
                         <FormControlLabel
                             value="file"
@@ -83,17 +82,16 @@ function QRCodeInput(props) {
             <Card className={classes.inputCard}>
                 <FormControl className={classes.input}>
                     {radioValue === 'text' ? (<TextField
-                        hidden={true}
-                        id="content"
-                        label="Content"
+                        id="qr-value"
+                        label={t('qrcode.text.content')}
                         variant="outlined"
-                        value={content}
+                        value={qrValue}
                         fullWidth
                         multiline
                         size="medium"
                         onChange={handleTextContentChange}
                     />) : null}
-                    {radioValue === 'wifi' ? (<WIFIInput/>) : null}
+                    {radioValue === 'wifi' ? (<WIFIInput handleWIFIQrValue={props.handleQrValue}/>) : null}
                     {radioValue === 'file' ? (<FileUpload/>) : null}
                     {radioValue === 'pic' ? (<h1>pic</h1>) : null}
                 </FormControl>

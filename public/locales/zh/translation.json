@@ -9,8 +9,16 @@
     "title": "这是主页"
   },
   "qrcode": {
-    "text": "文本",
-    "wifi": "WIFI",
+    "text": {
+      "title": "文本",
+      "content": "内容, 可多行"
+    },
+    "wifi": {
+      "title": "WIFI",
+      "network": "WIFI名称",
+      "password": "WIFI密码",
+      "encryption": "加密方式"
+    },
     "file": "文件",
     "pic": "图片"
   },
