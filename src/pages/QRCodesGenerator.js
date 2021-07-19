@@ -46,14 +46,6 @@ function QRCodesGenerator() {
                             value={qrValue}
                             size={150}
                             renderAs="svg"
-                            imageSettings={
-                                {
-                                    src: 'https://golang.google.cn/lib/godoc/images/footer-gopher.jpg',
-                                    height: 30,
-                                    width: 30,
-                                    excavate: true,
-                                }
-                            }
                         />
                     </CardContent>
                 </Card>
