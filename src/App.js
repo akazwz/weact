@@ -9,15 +9,15 @@ import TestPage from './pages/TestPage';
 import SettingPage from './pages/SettingPage';
 import {useSelector} from 'react-redux';
 import {typeValue} from './redux/themeType';
-import QRCodesGenerator from "./pages/QRCodesGenerator";
+import QRCodesGenerator from './pages/QRCodesGenerator';
 
 function App() {
-    const type = useSelector(typeValue)
+    const type = useSelector(typeValue);
     const theme = createTheme({
         palette: {
-            type: type
-        }
-    })
+            type: type,
+        },
+    });
     return (
         <Suspense fallback={<Loading/>}>
             <ThemeProvider theme={theme}>
