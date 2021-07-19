@@ -6,7 +6,7 @@
 
 ## complete
 
-### 1.language change ✅
+### 1. multi language ✅
 
 ### 2.dark mode ✅
 
