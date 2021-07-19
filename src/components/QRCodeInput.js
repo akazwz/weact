@@ -9,8 +9,9 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles} from "@material-ui/core";
 import FileUpload from "./FileUpload";
 import {useTranslation} from 'react-i18next';
-import WIFIInput from "./WIFIInput";
-
+import WIFIInput from './WIFIInput';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
 const useStyles = makeStyles(() => ({
     card: {},
@@ -73,7 +74,7 @@ function QRCodeInput(props) {
                         <FormControlLabel
                             value="pic"
                             control={<Radio color="primary"/>}
-                            label={t('qrcode.pic')}
+                            label={t('qrcode.img')}
                         />
                     </RadioGroup>
                 </FormControl>
@@ -91,9 +92,16 @@ function QRCodeInput(props) {
                         size="medium"
                         onChange={handleTextContentChange}
                     />) : null}
-                    {radioValue === 'wifi' ? (<WIFIInput handleWIFIQrValue={props.handleQrValue}/>) : null}
-                    {radioValue === 'file' ? (<FileUpload handleFileQrValue={props.handleQrValue}/>) : null}
-                    {radioValue === 'pic' ? (<h1>pic</h1>) : null}
+                    {radioValue === 'wifi' ?
+                        (<WIFIInput handleWIFIQrValue={props.handleQrValue}/>) : null}
+                    {radioValue === 'file' ?
+                        (<FileUpload handleFileUrl={props.handleQrValue}
+                                     icon={<CloudUploadIcon fontSize="large"/>}
+                                     accept="*"/>) : null}
+                    {radioValue === 'pic' ?
+                        (<FileUpload handleFileUrl={props.handleQrValue}
+                                     icon={<PhotoCamera fontSize="large"/>}
+                                     accept="image/*"/>) : null}
                 </FormControl>
             </Card>
         </div>

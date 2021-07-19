@@ -20,7 +20,7 @@
       "encryption": "加密方式"
     },
     "file": "文件",
-    "pic": "图片"
+    "img": "图片"
   },
   "test": {
     "title": "这是测试页面"

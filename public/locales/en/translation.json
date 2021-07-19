@@ -20,7 +20,7 @@
       "encryption": "Encryption"
     },
     "file": "FILE",
-    "pic": "pic"
+    "img": "Image"
   },
   "test": {
     "title": "this is test page"
