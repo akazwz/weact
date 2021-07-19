@@ -12,9 +12,13 @@
 
 ### 3.qrcode generate ✅
 
-1.Text qrcode generate
+1.Text Qrcode Generate
 
-2.WIFI qrcode generate
+2.WIFI Qrcode Generate
 
+3.File Qrcode Generate
+File Server, coding with go + gin  source code at [weact-backend](https://github.com/akazwz/weact-backend)
+
+4.Image Qrcode Generate
 ![qrcode](./qrcode.gif)
 
