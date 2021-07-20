@@ -41,9 +41,11 @@ function QRCodeInput(props) {
     const handleRadioChange = (e) => {
         setRadioValue(e.target.value)
     };
+    // setState pending
     const handleTextContentChange = (e) => {
-        setQrValue(e.target.value);
-        props.handleQrValue(qrValue);
+        const value = e.target.value;
+        props.handleQrValue(value);
+        setQrValue(value);
     };
     return (
         <div>
