@@ -1,7 +1,7 @@
 FROM node as builder
 WORKDIR /weact
 COPY . .
-RUN npm run install
+RUN npm install
 RUN npm run build
 
 FROM node
