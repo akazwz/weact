@@ -31,7 +31,7 @@ function FileUpload(props) {
                 accept={props.accept}
             />
             <label htmlFor="contained-button-file">
-                <IConButton variant="contained" color="primary" component="span" size="large">
+                <IConButton variant="contained" color="primary" component="span" size="medium">
                     {props.icon}
                 </IConButton>
             </label>
